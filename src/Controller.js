@@ -9,7 +9,17 @@ export default class Controller extends Component {
       width: "",
       toDraw: [],
     }
+    this.onSubmit = this.onSubmit.bind(this);
     this.onChange = this.onChange.bind(this);
+  }
+
+  onSubmit(evt) {
+    evt.preventDefault();
+    const newShape = {
+      color: this.state.color,
+      width: this.state.width,
+    }
+    this.setState({ toDraw: [...this.state.toDraw, newShape]})
   }
 
   onChange(evt) {
@@ -31,6 +41,7 @@ export default class Controller extends Component {
           <input name="width" onChange={this.onChange} />
           <button type="submit">draw!</button>
         </form>
+        { this.state.toDraw.length ? <Viz shapes={this.state.toDraw} /> : null }
       </div>
     )
   }
