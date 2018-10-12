@@ -13,7 +13,7 @@ export default class Viz extends Component {
   shouldComponentUpdate() {
     return false;
   }
-  componentWillRecieveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (this.props.shapes.length !== nextProps.shapes.length) {
       d3.select('.viz > *').remove();
       this.draw(nextProps)

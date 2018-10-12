@@ -30,14 +30,14 @@ export default class Controller extends Component {
     return(
       <div className="controller">
         <form onSubmit={this.onSubmit}>
-          <label>pick a color:</label>
+          <label>Pick a color:</label>
           <select name="color" onChange={this.onChange} >
-              <option disabled selected="selected" value="">choose</option>
+              <option disabled value="">choose</option>
               <option value="red">red</option>
-              <option value="orange">orange</option>
-              <option value="yellow">yellow</option>
+              <option value="blue">blue</option>
+              <option value="green">green</option>
           </select>
-          <label>how big:</label>
+          <label>How big should the circle be?</label>
           <input name="width" onChange={this.onChange} />
           <button type="submit">draw!</button>
         </form>
