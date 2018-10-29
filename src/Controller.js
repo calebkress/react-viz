@@ -32,7 +32,7 @@ export default class Controller extends Component {
         <form onSubmit={this.onSubmit}>
           <label>Pick a color:</label>
           <select name="color" onChange={this.onChange} >
-              <option disabled value="">choose</option>
+              <option value="">choose</option>
               <option value="red">red</option>
               <option value="blue">blue</option>
               <option value="green">green</option>
